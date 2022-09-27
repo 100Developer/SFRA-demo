@@ -1,0 +1,779 @@
+@charset "UTF-8";
+
+/*common*/
+section.pageWrap {
+  position: relative;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section.pageWrap h1 {
+  width: 100%;
+  padding-top: 2rem;
+}
+section.pageWrap h2 {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+[class^='ico_'] {
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../img/ico_PageDesign.png') no-repeat;
+}
+/*checkbox +Checkout*/
+.Checkout .checkbox {
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+}
+
+.Checkout .checkbox:hover .checkbox__check {
+  background: #ff475425;
+}
+
+.Checkout .checkbox__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Checkout .checkbox__input:checked + .checkbox__check {
+  background: var(--color-light-grey);
+  border: 1px solid var(--color-coral);
+  stroke-dashoffset: 0;
+}
+
+.Checkout .checkbox__check {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--color-blue-grey03);
+  stroke: var(--color-grey);
+  stroke-dasharray: 25;
+  stroke-dashoffset: 25;
+  stroke-linecap: round;
+  stroke-width: 1px;
+  fill: none;
+  transition: background 0.4s, stroke-dashoffset 0.6s;
+}
+
+.radio-option {
+  margin-right: 8px;
+}
+.hide-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*
+    Custom option
+    ---
+    Custom checkboxes & radio buttons
+*/
+
+/* Hide the actual input with the class .o-hide-accessible */
+
+/* the label is a separate component */
+.custom-input-option-label {
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.custom-input-option {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #c2cad3;
+  transition: border 0.1s ease-out;
+}
+
+.custom-input-option--radio {
+  border-radius: 100%;
+}
+
+.custom-input-option__symbol {
+  display: block;
+  opacity: 0; /* Hide the svg initially */
+  transform: scale(0.5);
+  transition: all 0.1s ease-out;
+}
+
+.custom-input-option--radio .custom-input-option__symbol {
+  background-color: var(--color-coral);
+  border: 1px solid var(--color-coral);
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+}
+
+/* focused and active state */
+
+.custom-input-option-hidden:focus
+  + .custom-input-option-label
+  .custom-input-option,
+.custom-input-option-hidden:active
+  + .custom-input-option-label
+  .custom-input-option {
+  border: 1px solid var(--color-coral);
+}
+
+/* checked state */
+
+.custom-input-option-hidden:checked
+  + .custom-input-option-label
+  .custom-input-option__symbol {
+  opacity: 1; /* Show the svg when the invisible checkbox is checked */
+  transform: scale(1);
+}
+
+/* <select> styles */
+.Checkout select {
+  /* Reset */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  /* Personalize */
+  width: 195px;
+  height: 31px;
+  padding: 0 4em 0 1em;
+  background: url('../img/Ic_caret-down.png') no-repeat right 6px center/ 12px,
+    linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.3) 3em,
+        rgba(255, 255, 255, 0.2) 3em
+      )
+      #fff;
+  color: var(--color-blue-grey);
+  cursor: pointer;
+  border: 1px solid var(--color-blue-grey02);
+  /* <option> colors */
+  /* Remove focus outline */
+  /* Remove IE arrow */
+}
+.Checkout select option {
+  color: inherit;
+  background-color: #320a28;
+}
+.Checkout select:focus {
+  outline: none;
+}
+.Checkout select::-ms-expand {
+  display: none;
+}
+
+/*icon*/
+.ico_increase {
+  width: 20px;
+  height: 20px;
+  background-position: -480px -120px;
+}
+.ico_decrease {
+  width: 20px;
+  height: 20px;
+  background-position: -600px -120px;
+}
+
+.ico_close {
+  width: 20px;
+  height: 20px;
+  background-position: -480px -120px;
+  transform: rotate(45deg);
+}
+
+/*unique*/
+
+section.pageWrap h2 b {
+  color: var(--color-coral);
+}
+
+.Checkout ol.breadcrumbs {
+  width: 28%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 2.3rem;
+  padding-top: 120px;
+}
+.Checkout ol.breadcrumbs li {
+  font-size: 1.143rem;
+  color: var(--color-grey02);
+  margin-right: 2.5rem;
+  position: relative;
+}
+.Checkout ol.breadcrumbs li a {
+  color: var(--color-grey02);
+}
+.Checkout ol.breadcrumbs li::after {
+  position: absolute;
+  top: 2px;
+  right: -21px;
+  width: 8px;
+  height: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  background: url('../img/ico_PageDesign.png') no-repeat;
+  background-position: -360px -120px;
+}
+
+.Checkout ol.breadcrumbs li.on {
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.Checkout ol.breadcrumbs li.on::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--color-coral);
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: -20px;
+  left: 30px;
+}
+
+.Checkout ol.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.Checkout ol.breadcrumbs li:last-child::after {
+  background: transparent;
+}
+
+.Checkout .ordercustomer-wrap {
+  width: 70%;
+  margin-right: 2%;
+  align-items: center;
+}
+.ordercustomer-wrap__cus-info {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-blue-grey03);
+  padding: 1.563rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 5px 1px rgb(1 1 1 / 20%);
+}
+
+.ordercustomer-wrap__cus-info dl dt,
+.ordercustomer-wrap__cus-info dl dd {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ordercustomer-wrap__cus-info dl dt {
+  margin-right: 1.25rem;
+}
+
+.ordercustomer-wrap__cus-info dl dd {
+  margin-right: 3.75rem;
+  font-weight: bold;
+}
+
+.Checkout .checkout-wrap {
+  width: 70%;
+  margin-right: 2%;
+}
+
+.recipient-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-blue-grey03);
+  padding: 1.563rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 5px 1px rgb(1 1 1 / 20%);
+}
+
+.recipient-wrap [class^='recipient-wrap__input'] {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.recipient-wrap [class$='input--half'] {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.recipient-wrap .recipient-wrap__input--half label {
+  position: absolute;
+  top: 20px;
+  font-weight: bold;
+}
+.recipient-wrap .recipient-wrap__input--half button {
+  padding: 17px 25px;
+}
+.recipient-wrap input {
+  border: 1px solid #c2cad3;
+  font-size: 16px;
+  color: #858d96;
+  padding: 15px 25px;
+  width: 80%;
+}
+.recipient-wrap .recipient-wrap__input input {
+  width: 90%;
+}
+
+.recipient-wrap .checkbox {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.sale-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-blue-grey03);
+  padding: 1.563rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 5px 1px rgb(1 1 1 / 20%);
+}
+
+.sale-wrap dl dt,
+.sale-wrap dl dd {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.sale-wrap dl dd label {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.sale-wrap dl dd input {
+  border: 1px solid #c2cad3;
+  font-size: 14px;
+  padding: 7px;
+}
+.sale-wrap dl dt {
+  font-size: 16px;
+  width: 20%;
+}
+.sale-wrap dl dd {
+  font-size: 16px;
+  font-weight: bold;
+  width: 75%;
+}
+
+.sale-wrap dl dd b {
+  color: var(--color-coral);
+}
+
+section.pageWrap .checkout-wrap h2 {
+  width: auto;
+  display: inline-block;
+}
+
+.Checkout .checkout-wrap .delivery-address-wrap {
+  display: inline-block;
+}
+
+.Checkout .checkout-wrap ul.delivery-address-choise {
+  margin-bottom: 0;
+  display: inline-block;
+}
+.delivery-address-choise li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.Checkout .checkout-wrap select {
+  display: inline-block;
+  margin-left: 10px;
+  width: 312px;
+}
+
+.Checkout .CheckoutBtn {
+  margin-left: auto;
+}
+
+.Checkout .checkout-wrap ul {
+}
+
+.Checkout .checkout-wrap ul.PA-list > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-blue-grey03);
+  padding: 1.286rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 5px 1px rgba(1, 1, 1, 0.2);
+}
+
+.Checkout .checkout-wrap ul.PA-list > li.on {
+  border: 1px solid var(--color-greyP);
+}
+
+.Checkout .checkout-wrap ul.PA-list > li.none {
+  background-color: var(--color-light-grey);
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.Checkout .checkout-wrap ul.PA-list > li.none i {
+  display: block;
+  width: 76px;
+  height: 64px;
+  background-position: -1077px -120px;
+}
+.Checkout .checkout-wrap ul.PA-list > li.none span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.714rem;
+  color: var(--color-blue-grey);
+  margin-top: 2rem;
+  font-weight: bold;
+}
+.Checkout .checkout-wrap ul.PA-list li .image {
+  width: 28%;
+  position: absolute;
+}
+.Checkout .checkout-wrap ul.PA-list li .text-contents {
+  width: 72%;
+  margin-left: 28%;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .PA-price {
+  width: 72%;
+  margin-left: 28%;
+  margin-bottom: 3em;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .buttonWrap.top_btn {
+  position: absolute;
+  top: 1.286rem;
+  right: 1.286rem;
+  display: flex;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .buttonWrap.top_btn .deleteBtn {
+  margin-left: 10px;
+}
+.Checkout .checkout-wrap ul.PA-list li .buttonWrap.top_btn .deleteBtn i {
+  display: none;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .item-image {
+  width: 200px;
+  position: relative;
+  height: 0;
+  padding-bottom: 240px;
+  margin-bottom: auto;
+  border-radius: 2.5em 0 2.5em 0;
+  overflow: hidden;
+  border: 2px solid #fff;
+  background: var(--color-black);
+  transition: transform var(--animation-duration) ease;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .optionButton {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .optionButton button {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 1px solid var(--color-blue-grey);
+}
+
+.Checkout .checkout-wrap ul.PA-list li button.close {
+  width: 32px;
+  height: 32px;
+  margin-left: 1rem;
+
+  background: #fff;
+  border: 1px solid var(--color-blue-grey);
+}
+
+.Checkout .checkout-wrap ul.PA-list li .optionButton input {
+  width: 32px;
+  height: 30px;
+  font-size: 12px;
+  padding: 0;
+  border: 1px solid var(--color-blue-grey);
+  text-align: center;
+  background: var(--color-light-grey);
+}
+.Checkout .checkout-wrap ul.PA-list li .item-brand {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 7px;
+  font-size: 12px;
+
+  height: 20px;
+  font-weight: bold;
+}
+.Checkout .checkout-wrap ul.PA-list li .item-name {
+  width: 100%;
+  margin-left: 7px;
+  line-height: 1.5em;
+  font-size: 14px;
+  word-break: keep-all;
+}
+.Checkout .checkout-wrap ul.PA-list li .item-price {
+  position: relative;
+  width: 100%;
+  margin: 15px 7px;
+  font-size: 1.143rem;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .item-price .percent {
+  font-weight: bold;
+  color: var(--color-coral);
+}
+
+.Checkout .checkout-wrap ul.PA-list li .item-price .price {
+  color: var(--color-black);
+  margin: 0 0.5em;
+}
+
+.Checkout .checkout-wrap ul.PA-list li .item-price .regular {
+  font-size: 12px;
+  color: var(--color-blue-grey02);
+}
+
+.Checkout .checkout-wrap ul.PA-price li {
+  width: 100%;
+  background: var(--color-light-grey);
+  padding: 7px 30px;
+  margin-bottom: 0.5rem;
+}
+.Checkout .checkout-wrap ul.PA-price li .select-option {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Checkout .checkout-wrap ul.PA-price li .select-option .optionName {
+  margin-right: auto;
+}
+
+.Checkout .checkout-wrap ul.PA-price li .select-option .optChangeBtn {
+  height: 32px;
+  font-size: 12px;
+  margin-left: 1rem;
+}
+
+.Checkout .checkout-wrap ul.PA-price li .select-option .price {
+  font-size: 1.286rem;
+}
+
+.Checkout .checkout-wrap ul.PA-price li .select-option .Checkout .checkArea {
+  width: 30%;
+}
+
+.Checkout .checkout-wrap .totalPrice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: 1.286rem;
+  bottom: 1.286rem;
+}
+
+.Checkout .checkout-wrap .totalPrice .optionNum {
+  margin-right: 1em;
+  position: relative;
+  top: -5px;
+}
+
+.Checkout .checkout-wrap .totalPrice .price {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-right: 1rem;
+  color: var(--color-grey02);
+}
+
+.Checkout .checkArea {
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  width: 28%;
+  height: 575px;
+}
+
+.Checkout .checkArea .orderPrice {
+  padding: 2rem;
+  border: 1px solid var(--color-blue-grey03);
+}
+
+.Checkout .checkArea .orderPrice h2 {
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.Checkout .checkArea .orderPrice .orderPrice-list {
+  display: flex;
+  padding: 20px;
+  background: var(--color-blue-grey03);
+  flex-wrap: wrap;
+}
+.Checkout .checkArea .orderPrice .orderPrice-list {
+  display: block;
+  width: 100%;
+}
+
+.Checkout .checkArea .orderPrice .orderPrice-list li {
+  display: flex;
+  margin: 1.5rem 0;
+}
+.Checkout .checkArea .orderPrice .orderPrice-list li .OL-price {
+  font-weight: bolder;
+  margin-left: auto;
+}
+
+.Checkout .checkArea .orderPrice .orderPrice-list li:nth-child(2) .OL-price {
+  color: var(--color-blue-grey);
+}
+
+.Checkout .checkArea .orderPrice .totalPrice {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+.Checkout .checkArea .orderPrice .totalPrice h5 {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+.Checkout .checkArea .orderPrice .totalPrice .optionNum {
+  margin-left: auto;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.Checkout .checkArea .orderPrice .totalPrice .price {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-left: 0.2em;
+  color: var(--color-coral);
+}
+
+.Checkout .checkArea .orderPrice .buttonWrap button {
+  font-size: 1.22rem;
+  width: 100%;
+  padding: 1em;
+}
+
+.Checkout .checkArea .orderPrice label.checkbox {
+  display: inline-block;
+  margin-top: 20px;
+  word-break: keep-all;
+  line-height: 1.5em;
+  font-size: 12px;
+}
+.Checkout .checkArea .orderPrice label.checkbox .checkbox__check {
+  margin-bottom: 50px;
+  margin-right: 10px;
+  float: left;
+}
+.Checkout .checkArea .orderPrice select {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+  margin-bottom: 2em !important;
+  padding: 1.286rem !important;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: '상품 펼쳐보기';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: '상품 접어보기';
+}
+
+.read-more-trigger {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0.5em;
+  color: #747576;
+  font-size: 0.9em;
+  padding: 10px;
+  line-height: 2;
+  border: 1px solid #ddd;
+  background: var(--color-light-grey);
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+}
+.read-more-trigger span {
+  font-size: 30px;
+  font-weight: 100;
+  position: absolute;
+  top: 8px;
+}

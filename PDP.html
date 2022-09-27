@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDP-Demo</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- CDN Swiper-slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script defer src="./js/PDP.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/PDP.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  </head>
+  <body>
+    <section class="PDP-top-contents">
+      <ol class="breadcrumbs">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">Skin care</a></li>
+        <li><a href="javascript:;">Ample</a></li>
+      </ol>
+      <div class="PDP-productWrap clearFix">
+        <div class="PDP-productContents-text">
+          <h2 class="PDP-productBrand">
+            <a href="javascript:;">이너프 프로젝트<i class="ico_link"></i></a>
+          </h2>
+          <b class="PDP-productName">24H 유스 앰플 50ml</b>
+          <span class="PDP-productLabel">사은품</span>
+          <div class="item-review">
+            <i class="ico_starR"></i>
+            <i class="ico_starR"></i>
+            <i class="ico_starR"></i>
+            <i class="ico_starR"></i>
+            <i class="ico_starG"></i>
+            | <b>리뷰 46</b>
+          </div>
+          <div class="item-price">
+            <span class="percent">24%</span>
+            <span class="price"
+              >120,000원<span class="regular"><del>120,000원</del></span></span
+            >
+          </div>
+          <div class="item-share">
+            <span class="heart"><i class="ico_heartG"></i><b>45</b></span>
+            <span class="share"><i class="ico_share"></i></span>
+          </div>
+        </div>
+
+        <div class="PDP-productImage">
+          <div style="--swiper-navigation-color: #292d30; --swiper-pagination-color: #292d30" class="swiper PDP-swiper PDP-mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/img_product1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product4.jpg" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div thumbsSlider="" class="swiper PDP-swiper PDP-mySwiper thumbsSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/img_product1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/img_product4.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="PDP-productContents-detail">
+          <ul>
+            <li>
+              <i class="ico_seller"></i><span>판매자</span>
+              <b>아모레퍼시픽</b>
+            </li>
+            <li>
+              <details>
+                <summary><i class="ico_delivery"></i><span>무료배송</span><i class="ico_arrBottom"></i></summary>
+                <p>최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><i class="ico_checkout"></i><span>결제혜택</span><i class="ico_arrBottom"></i></summary>
+                <p>
+                  즉시할인 국민카드 5만원 이상 결제시 5천원 할인<br />
+                  카드포인트 현대카드 M포인트 20% 사용<br />
+                  무이자할부 최대 8개월 무이자할부
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><i class="ico_Bpoint"></i><span>뷰티포인트 적립제외</span><i class="ico_arrBottom"></i></summary>
+                <p>구매확정 시 할인 적용금액의 1%를 적립해드립니다.</p>
+              </details>
+            </li>
+            <li><i class="ico_gift"></i><span>스페셜 기프트</span><span class="SmallF">뷰티포인트 전액 결제시 제외</span></li>
+          </ul>
+        </div>
+        <div class="PDP-productContents-checkout">
+          <div class="select-option clearFix">
+            <div class="optionName">24H 유스 앰플 50ML</div>
+            <div class="optionButton">
+              <button class="decrease" type="button" disabled>
+                <i class="ico_decrease"></i>
+              </button>
+              <input type="text" value="01" readonly />
+              <button class="increase" type="button" disabled>
+                <i class="ico_increase"></i>
+              </button>
+            </div>
+            <div class="totalPrice">
+              <span class="price"
+                >120,000<span class="regular"><del>120,000</del></span></span
+              >
+            </div>
+          </div>
+          <div class="product-checkout">
+            <div class="totalPrice">
+              <span class="optionNum">총 1개</span>
+              <span class="price">21,280원</span>
+            </div>
+            <div class="buttonWrap">
+              <button class="cartBtn secondary" type="button">장바구니</button>
+              <button class="checkoutBtn primary" type="button">구매하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="PDP-detail-contents clearFix">
+      <article>
+        <div id="tab-PDP" class="tab-content">
+          <div id="tabs-container">
+            <ul class="tabs-menu-PDP">
+              <li class="current"><a href="#tab-PDP01">상세정보</a></li>
+              <li><a href="#tab-PDP02">상품리뷰</a></li>
+              <li><a href="#tab-PDP03">배송정보</a></li>
+            </ul>
+            <div class="tab">
+              <div id="tab-PDP01" class="tab-content-PDP">
+                <p>
+                  <img src="./img/img_product1.jpg" />
+                  <img src="./img/img_product2.jpg" />
+                  <img src="./img/img_product3.jpg" />
+                  <img src="./img/img_product4.jpg" />
+                  <img src="./img/img_product5.jpg" />
+                </p>
+
+                <table>
+                  <caption>
+                    판매자 정보
+                  </caption>
+                  <colgroup>
+                    <col width="35%" />
+                    <col width="65%" />
+                  </colgroup>
+                  <tr>
+                    <th>상호 및 대표자 성명</th>
+                    <td>아모레퍼시픽 / 안세홍</td>
+                  </tr>
+                  <tr>
+                    <th>사업자 주소</th>
+                    <td>서울시 용산구 한강대로 100</td>
+                  </tr>
+                  <tr>
+                    <th>고객 문의 대표 번호</th>
+                    <td>080-030-5454</td>
+                  </tr>
+                  <tr>
+                    <th>사업자 번호</th>
+                    <td>106-86-43373</td>
+                  </tr>
+                  <tr>
+                    <th>통신판매신고번호</th>
+                    <td>2017-서울용산-1308</td>
+                  </tr>
+                  <tr>
+                    <th>대표이메일</th>
+                    <td>i2maxSupport@gmail.com</td>
+                  </tr>
+                </table>
+              </div>
+              <div id="tab-PDP02" class="tab-content-PDP">
+                <p>
+                  <img src="./img/img_product6.jpg" />
+                  <img src="./img/img_product7.jpg" />
+                  <img src="./img/img_product8.jpg" />
+                  <img src="./img/img_product9.jpg" />
+                  <img src="./img/img_product10.jpg" />
+                </p>
+              </div>
+              <div id="tab-PDP03" class="tab-content-PDP">
+                <p>
+                  <img src="./img/img_product11.jpg" />
+                  <img src="./img/img_product12.jpg" />
+                  <img src="./img/img_product13.jpg" />
+                  <img src="./img/img_product14.jpg" />
+                  <img src="./img/img_product15.jpg" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <aside>
+        <div class="select-option clearFix">
+          <div class="optionName">24H 유스 앰플 50ML</div>
+          <div class="optionButton">
+            <button class="decrease" type="button" disabled>
+              <i class="ico_decrease"></i>
+            </button>
+            <input type="text" value="1" readonly />
+            <button class="increase" type="button" disabled>
+              <i class="ico_increase"></i>
+            </button>
+          </div>
+          <div class="totalPrice">
+            <span class="price"
+              >120,000<span class="regular"><del>120,000</del></span></span
+            >
+          </div>
+        </div>
+        <div class="product-checkout">
+          <div class="totalPrice">
+            <span class="optionNum">총 1개</span>
+            <span class="price">21,280원</span>
+          </div>
+          <div class="buttonWrap">
+            <button class="cartBtn secondary" type="button">장바구니</button>
+            <button class="checkoutBtn primary" type="button">구매하기</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <section class="PDP-together-products">
+      <div class="PDP-bgWrap">
+        <h3>이 상품과 함께 본 상품</h3>
+        <div class="horizon-scroll">
+          <div class="inner">
+            <div class="PDP-rowProducts">
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product9.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product14.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product18.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--horizonScroll-->
+        <h3>이 상품과 함께 본 상품</h3>
+        <div class="horizon-scroll">
+          <div class="inner">
+            <div class="PDP-rowProducts">
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product20.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product21.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product22.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+              <div class="items">
+                <a class="cart" href="javascript:;"><i class="cart"></i></a>
+                <a class="like" href="javascript:;"><i class="like"></i></a>
+                <div class="item-image">
+                  <a href="javascript:;"><img src="./img/img_product24.jpg" /></a>
+                </div>
+                <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+                <div class="item-price">
+                  <span class="percent">24%</span>
+                  <span class="price">120,000</span>
+                  <span class="regular"><del>120,000</del></span>
+                </div>
+                <div class="item-review">
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starR"></i>
+                  <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

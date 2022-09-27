@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CART</title>
+  <!-- CDN fontstyle -->
+  <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com”
+    crossorigin>
+  <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+  <!-- favicon -->
+  <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico”
+    type=“image/x-icon”> 
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/CART.css" />
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+</head>
+
+<body>
+  <section class="pageWrap CART">
+    <h1>장바구니</h1>
+    <div class="buttonWrap productAreaOpt">
+      <label class="checkbox">
+        <input class="checkbox__input" type="checkbox" />
+        <svg class="checkbox__check">
+          <polyline points="15 3 6 11 2 6"></polyline>
+        </svg>
+        전체선택 (1)
+      </label>
+      <button class="cartBtn secondary" type="button">선택삭제</button>
+    </div>
+    <ol class="breadcrumbs">
+      <li class="on"><a href="javascript:;">장바구니</a></li>
+      <li><a href="javascript:;">주문/결제</a></li>
+      <li><a href="javascript:;">주문완료</a></li>
+    </ol>
+    <article class="productArea">
+      <ul class="PA-list">
+        <li>
+          <div class="buttonWrap top_btn">
+            <button class="likeBtn default" type="button">
+              위시등록<i class="ico_likeBtn"></i>
+            </button>
+            <button class="deleteBtn secondary" type="button">
+              삭제<i class="ico_close"></i>
+            </button>
+          </div>
+          <div class="image">
+            <div class="item-image">
+              <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+            </div>
+          </div>
+          <div class="text-contents">
+            <div class="item-brand">헤라</div>
+            <div class="item-name"><label class="checkbox">
+                <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                <svg class="checkbox__check">
+                  <polyline points="15 3 6 11 2 6"></polyline>
+                </svg>
+                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+              </label></div>
+            <div class="item-price">
+              <span class="percent">26%</span>
+              <span class="price">29,750원</span>
+              <span class="regular"><del>35,000원</del></span>
+            </div>
+          </div>
+          <ul class="PA-price">
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="totalPrice">
+            <span class="optionNum">총 3개</span>
+            <span class="price">89,250원</span>
+            <button class="checkoutBtn primary" type="button">
+              바로구매
+            </button>
+          </div>
+        </li>
+        <!--📌 DEV Check(2) : class="checkbox__input" [checked]시 li class="on" 추가  -->
+        <li class="on">
+          <div class="buttonWrap top_btn">
+            <button class="likeBtn default" type="button">
+              위시등록<i class="ico_likeBtn"></i>
+            </button>
+            <button class="deleteBtn secondary" type="button">
+              삭제<i class="ico_close"></i>
+            </button>
+          </div>
+          <div class="image">
+            <div class="item-image">
+              <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+            </div>
+          </div>
+          <div class="text-contents">
+            <div class="item-brand">헤라</div>
+            <div class="item-name"><label class="checkbox">
+                <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" checked />
+                <svg class="checkbox__check">
+                  <polyline points="15 3 6 11 2 6"></polyline>
+                </svg>로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
+            <div class="item-price">
+              <span class="percent">26%</span>
+              <span class="price">29,750원</span>
+              <span class="regular"><del>35,000원</del></span>
+            </div>
+          </div>
+          <ul class="PA-price">
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+            </li>
+            <li>
+
+              <div class="select-option clearFix">
+                <div class="optionName">
+                  <!--📌 DEV Check(3) : selectbox 생성 -->
+                  <select>
+                    <option selected value="0">옵션선택</option>
+                    <option value="1">121호 에피소드</option>
+                    <option value="2">139호 디어 베티</option>
+                    <option value="3">499호 로지 스웨이드</option>
+                  </select>
+                </div>
+                <!--📌 DEV Check(4) : selectbox 생성시 class="primary 변경" -->
+                <button class="optChangeBtn primary" type="button">
+                  옵션적용
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="totalPrice">
+            <span class="optionNum">총 3개</span>
+            <span class="price">89,250원</span>
+            <button class="checkoutBtn primary" type="button">
+              바로구매
+            </button>
+          </div>
+        </li>
+
+        <li>
+          <div class="buttonWrap top_btn">
+            <button class="likeBtn default" type="button">
+              위시등록<i class="ico_likeBtn"></i>
+            </button>
+            <button class="deleteBtn secondary" type="button">
+              삭제<i class="ico_close"></i>
+            </button>
+          </div>
+          <div class="image">
+            <div class="item-image">
+              <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+            </div>
+          </div>
+          <div class="text-contents">
+            <div class="item-brand">헤라</div>
+            <div class="item-name"><label class="checkbox">
+                <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                <svg class="checkbox__check">
+                  <polyline points="15 3 6 11 2 6"></polyline>
+                </svg>로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
+            <div class="item-price">
+              <span class="percent">26%</span>
+              <span class="price">29,750원</span>
+              <span class="regular"><del>35,000원</del></span>
+            </div>
+          </div>
+          <ul class="PA-price">
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="totalPrice">
+            <span class="optionNum">총 3개</span>
+            <span class="price">89,250원</span>
+            <button class="checkoutBtn primary" type="button">
+              바로구매
+            </button>
+          </div>
+        </li>
+
+        <li>
+          <div class="buttonWrap top_btn">
+            <button class="likeBtn default" type="button">
+              위시등록<i class="ico_likeBtn"></i>
+            </button>
+            <button class="deleteBtn secondary" type="button">
+              삭제<i class="ico_close"></i>
+            </button>
+          </div>
+          <div class="image">
+            <div class="item-image">
+              <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+            </div>
+          </div>
+          <div class="text-contents">
+            <div class="item-brand">헤라</div>
+            <div class="item-name"><label class="checkbox">
+                <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                <svg class="checkbox__check">
+                  <polyline points="15 3 6 11 2 6"></polyline>
+                </svg>로즈 인퓨전 컬렉션 센슈얼 파우더 매트</div>
+            <div class="item-price">
+              <span class="percent">26%</span>
+              <span class="price">29,750원</span>
+              <span class="regular"><del>35,000원</del></span>
+            </div>
+          </div>
+          <ul class="PA-price">
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="select-option clearFix">
+                <div class="optionName">121호 에피소드</div>
+                <button class="optChangeBtn secondary" type="button">
+                  옵션변경
+                </button>
+                <div class="optionButton">
+                  <button class="decrease" type="button" disabled>
+                    <i class="ico_decrease"></i>
+                  </button>
+                  <input type="text" value="01" readonly />
+                  <button class="increase" type="button" disabled>
+                    <i class="ico_increase"></i>
+                  </button>
+                </div>
+
+                <span class="price">29,750원</span>
+                <button class="close" type="button" disabled>
+                  <i class="ico_close"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="totalPrice">
+            <span class="optionNum">총 3개</span>
+            <span class="price">89,250원</span>
+            <button class="checkoutBtn primary" type="button">
+              바로구매
+            </button>
+          </div>
+        </li>
+        <li class="none">
+          <i class="ico_noneCart"></i>
+          <span>등록된 상품이 없습니다.</span>
+        </li>
+      </ul>
+    </article>
+
+    <aside class="checkArea">
+      <div class="orderPrice clearFix">
+        <h2>주문 금액</h2>
+        <ul class="orderPrice-list">
+          <li>
+            <span class="OL-tit">상품 금액</span>
+            <span class="OL-price">59,500원</span>
+          </li>
+          <li>
+            <span class="OL-tit">할인 금액</span>
+            <span class="OL-price">-9,500원</span>
+          </li>
+          <li>
+            <span class="OL-tit">배송비</span>
+            <span class="OL-price">2,500원</span>
+          </li>
+        </ul>
+        <div class="totalPrice">
+          <h5>결제 예상 금액</h5>
+          <span class="optionNum">총 1개</span>
+          <span class="price">21,280원</span>
+        </div>
+        <div class="buttonWrap">
+          <!--📌 DEV Check(1) : button class="주문상품 있을때 : primary OR 주문상품 없을때 : default"  -->
+          <button class="checkoutBtn primary" type="button">
+            주문하기&nbsp;<span>(2개)</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </section>
+  <script>
+    function onClickHandler() {
+      var chk = document.getElementById("box").value;
+
+      //use this value
+
+    }
+  </script>
+</body>
+
+</html>

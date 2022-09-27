@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage_Review_write</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”> <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- Mypage -->
+    <script defer src="./js/Mypage_write.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="mypage-wrap">
+        <div class="mypage-header">
+            <h1>마이페이지</h1>
+            <nav>
+                <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+                    <option value="javascript:;">홈</option>
+                    <option value="javascript:;">주문조회</option>
+                    <option value="javascript:;">쿠폰</option>
+                    <option value="javascript:;">위시상품</option>
+                    <option value="javascript:;">배송지관리</option>
+                    <option value="javascript:;">리뷰</option>
+                    <option value="javascript:;">문의내역</option>
+                    <option value="javascript:;">회원정보</option>
+                </select>
+            </nav>
+            <aside class="mypage-menu-wrap">
+                <nav>
+                    <ol class="mypage-menu">
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">홈</a>
+                        </li>
+
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">주문조회</a>
+                        </li>
+                        <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">위시상품</a>
+                        </li>
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">배송지관리</a>
+                        </li>
+                        <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+                        <li class="mypage-menu__link--on"><a href="javascript:;">리뷰</a></li>
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">문의내역</a>
+                        </li>
+                        <li class="mypage-menu__link">
+                            <a href="javascript:;">회원정보</a>
+                        </li>
+                    </ol>
+                </nav>
+            </aside>
+        </div>
+        <section class="mypage_contents-wrap">
+            <h2>리뷰 작성하기</h2>
+            <h2>상품 정보</h2>
+
+            <div class="order-list-wrap">
+                <ul class="order-list">
+                    <li>
+                        <div class="image">
+                            <div class="item-image">
+                                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="text-contents">
+                            <div class="item-brand">헤라</div>
+                            <div class="item-name">
+                                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+                            </div>
+                            <div class="item-price">
+                                <span class="percent">26%</span>
+                                <span class="price">29,750원</span>
+                                <span class="regular"><del>35,000원</del></span>
+                            </div>
+                        </div>
+                        <ul class="product-price">
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <div class="item-image">
+                                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="text-contents">
+                            <div class="item-brand">헤라</div>
+                            <div class="item-name">
+                                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+                            </div>
+                            <div class="item-price">
+                                <span class="percent">26%</span>
+                                <span class="price">29,750원</span>
+                                <span class="regular"><del>35,000원</del></span>
+                            </div>
+                        </div>
+                        <ul class="product-price">
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>평점</h2>
+
+            <div class="review-star-rating-wrap">
+                <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                </fieldset>
+
+            </div>
+
+            <h2>이미지 첨부 (최대 5개)</h2>
+            <div class="horizon-scroll">
+                <div class="review-image-file-wrap">
+                    <div class="image-upload-container">
+                        <div class="image-upload-one">
+                            <div class="center">
+                                <div class="form-input">
+                                    <label for="file-ip-1">
+                                        <img id="file-ip-1-preview" src="./img/Ic_imageUpload.png">
+                                        <button type="button" class="imgRemove" onclick="myImgRemove(1)"></button>
+                                    </label>
+                                    <input type="file" name="img_one" id="file-ip-1" accept="image/*" onchange="showPreview(event, 1);">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="image-upload-two">
+                            <div class="center">
+                                <div class="form-input">
+                                    <label for="file-ip-2">
+                                        <img id="file-ip-2-preview" src="./img/Ic_imageUpload.png">
+                                        <button type="button" class="imgRemove" onclick="myImgRemove(2)"></button>
+                                    </label>
+                                    <input type="file" name="img_two" id="file-ip-2" accept="image/*" onchange="showPreview(event, 2);">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="image-upload-three">
+                            <div class="center">
+                                <div class="form-input">
+                                    <label for="file-ip-3">
+                                        <img id="file-ip-3-preview" src="./img/Ic_imageUpload.png">
+                                        <button type="button" class="imgRemove" onclick="myImgRemove(3)"></button>
+                                    </label>
+                                    <input type="file" name="img_three" id="file-ip-3" accept="image/*" onchange="showPreview(event, 3);">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="image-upload-four">
+                            <div class="center">
+                                <div class="form-input">
+                                    <label for="file-ip-4">
+                                        <img id="file-ip-4-preview" src="./img/Ic_imageUpload.png">
+                                        <button type="button" class="imgRemove" onclick="myImgRemove(4)"></button>
+                                    </label>
+                                    <input type="file" name="img_four" id="file-ip-4" accept="image/*" onchange="showPreview(event, 4);">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="image-upload-five">
+                            <div class="center">
+                                <div class="form-input">
+                                    <label for="file-ip-5">
+                                        <img id="file-ip-5-preview" src="./img/Ic_imageUpload.png">
+                                        <button type="button" class="imgRemove" onclick="myImgRemove(5)"></button>
+                                    </label>
+                                    <input type="file" name="img_five" id="file-ip-5" accept="image/*" onchange="showPreview(event, 5);">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2>내용</h2>
+            <div class="review-textarea-wrap">
+                <textarea class="review-textarea" placeholder="리뷰 내용을 입력해주세요."></textarea>
+
+            </div>
+            <div class="button-wrap-center">
+                <button class="primary">
+                    등록
+                </button>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+
+</html>

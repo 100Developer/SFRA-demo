@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="mypage-wrap">
+      <div class="mypage-header">
+        <h1>마이페이지</h1>
+        <nav>
+          <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+            <option value="javascript:;">홈</option>
+            <option value="javascript:;">주문조회</option>
+            <option value="javascript:;">쿠폰</option>
+            <option value="javascript:;">위시상품</option>
+            <option value="javascript:;">배송지관리</option>
+            <option value="javascript:;">리뷰</option>
+            <option value="javascript:;">문의내역</option>
+            <option value="javascript:;">회원정보</option>
+          </select>
+        </nav>
+        <aside class="mypage-menu-wrap">
+          <nav>
+            <ol class="mypage-menu">
+              <li class="mypage-menu__link--on">
+                <a href="javascript:;">홈</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">주문조회</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">위시상품</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">배송지관리</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">문의내역</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">회원정보</a>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <section class="mypage_contents-wrap">
+        <div class="mypage-count-wrap">
+          <ul class="mypage-count">
+            <li>
+              <span class="mypage_count__tit">최근 주문</span>
+              <span class="mypage-count__num">0</span>
+            </li>
+            <li>
+              <span class="mypage_count__tit">취소/반품</span>
+              <span class="mypage-count__num">0</span>
+            </li>
+            <li>
+              <span class="mypage_count__tit">쿠폰</span>
+              <span class="mypage-count__num">0</span>
+            </li>
+            <li>
+              <span class="mypage_count__tit">적립금</span>
+              <span class="mypage-count__num">0원</span>
+            </li>
+            <li>
+              <span class="mypage_count__tit">위시</span>
+              <span class="mypage-count__num">0</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="recent-order-list-wrap">
+          <h2>최근 주문내역</h2>
+          <ul class="order-count">
+            <!--📌 DEV Check(6) : 최근 주문내역 카운트 있을시, li class="order-count--count" 추가-->
+            <li class="order-count--count">
+              <span class="order-count__tit">주문접수</span>
+              <span class="order-count__num">1</span>
+            </li>
+            <li>
+              <span class="order-count__tit">결제완료</span>
+              <span class="order-count__num">0</span>
+            </li>
+            <li class="order-count--count">
+              <span class="order-count__tit">상품준비중</span>
+              <span class="order-count__num">1</span>
+            </li>
+            <li>
+              <span class="order-count__tit">배송중</span>
+              <span class="order-count__num">0원</span>
+            </li>
+            <li>
+              <span class="order-count__tit">배송완료</span>
+              <span class="order-count__num">0</span>
+            </li>
+          </ul>
+          <div class="Product-list-wrap">
+            <ul class="Product-list">
+              <li>
+                <div class="Product-list__image">
+                  <div class="Product-list__image__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                </div>
+                <div class="Product-list__text-contents">
+                  <div class="Product-list__text-contents__item-brand">헤라</div>
+                  <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                  <div class="Product-list__item-info">
+                    <span class="Product-list__item-info__price">29,750원</span>
+                    <span class="Product-list__item-info__condition">결제완료</span>
+                    <span class="Product-list__item-info__date">2022.02.11</span>
+                    <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                  </div>
+                </div>
+                <div class="Product-list__button">
+                  <button type="button" class="secondary">주문취소</button>
+                </div>
+              </li>
+              <li>
+                <div class="Product-list__image">
+                  <div class="Product-list__image__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                </div>
+                <div class="Product-list__text-contents">
+                  <div class="Product-list__text-contents__item-brand">헤라</div>
+                  <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                  <div class="Product-list__item-info">
+                    <span class="Product-list__item-info__price">29,750원</span>
+                    <span class="Product-list__item-info__condition">결제완료</span>
+                    <span class="Product-list__item-info__date">2022.02.11</span>
+                    <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                  </div>
+                </div>
+                <div class="Product-list__button">
+                  <button type="button" class="default">리뷰작성</button>
+                  <button type="button" class="secondary">반품신청</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="wish-list-wrap">
+          <h2>위시상품</h2>
+          <div class="horizon-scroll">
+            <div class="inner">
+              <div class="wish-list">
+                <div class="wish-list-items">
+                  <div class="wish-list-items__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                  <div class="wish-list-items__item-brand">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-name">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-price">
+                    <span class="wish-list-items__item-price-percent">24%</span>
+                    <span class="wish-list-items__item-price-price">120,000</span>
+                    <span class="wish-list-items__item-price-regular"><del>120,000</del></span>
+                  </div>
+                  <div class="wish-list-items__item-review">
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                  </div>
+                </div>
+                <div class="wish-list-items">
+                  <div class="wish-list-items__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                  <div class="wish-list-items__item-brand">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-name">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-price">
+                    <span class="wish-list-items__item-price-percent">24%</span>
+                    <span class="wish-list-items__item-price-price">120,000</span>
+                    <span class="wish-list-items__item-price-regular"><del>120,000</del></span>
+                  </div>
+                  <div class="wish-list-items__item-review">
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                  </div>
+                </div>
+                <div class="wish-list-items">
+                  <div class="wish-list-items__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                  <div class="wish-list-items__item-brand">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-name">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-price">
+                    <span class="wish-list-items__item-price-percent">24%</span>
+                    <span class="wish-list-items__item-price-price">120,000</span>
+                    <span class="wish-list-items__item-price-regular"><del>120,000</del></span>
+                  </div>
+                  <div class="wish-list-items__item-review">
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                  </div>
+                </div>
+                <div class="wish-list-items">
+                  <div class="wish-list-items__item-image">
+                    <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                  </div>
+                  <div class="wish-list-items__item-brand">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-name">CHRISTIAN LOUBOUTIN</div>
+                  <div class="wish-list-items__item-price">
+                    <span class="wish-list-items__item-price-percent">24%</span>
+                    <span class="wish-list-items__item-price-price">120,000</span>
+                    <span class="wish-list-items__item-price-regular"><del>120,000</del></span>
+                  </div>
+                  <div class="wish-list-items__item-review">
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starR"></i>
+                    <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--horizonScroll-->
+        </div>
+        <div class="inquiry-list-wrap">
+          <h2>문의 내역</h2>
+
+          <ul class="inquiry-list">
+            <li>
+              <details>
+                <summary>
+                  <span>2022.02.11</span>
+                  <button type="button" class="secondary">확인중</button>
+                  <b>Q. 품절상품 재입고 문의 합니다.</b><i class="ico_arrBottom"></i>
+                </summary>
+                <p>최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <span>2022.02.11</span>
+                  <button type="button" class="default">답변완료</button>
+                  <b>Q. 품절상품 재입고 문의 합니다.</b><i class="ico_arrBottom"></i>
+                </summary>
+                <p>최종 결제금액이 20,000원 이상이면 무료로 배송됩니다.</p>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

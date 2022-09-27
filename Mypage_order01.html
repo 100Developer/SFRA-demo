@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mypage_order01</title>
+  <!-- CDN fontstyle -->
+  <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com”
+    crossorigin>
+  <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+  <!-- favicon -->
+  <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico”
+    type=“image/x-icon”> <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  <!-- jQuery -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+  <!-- Mypage -->
+  <script defer src="./js/Mypage.js"></script>
+</head>
+
+<body>
+  <div class="mypage-wrap">
+    <div class="mypage-header">
+      <h1>마이페이지</h1>
+      <nav>
+        <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+          <option value="javascript:;">홈</option>
+          <option value="javascript:;">주문조회</option>
+          <option value="javascript:;">쿠폰</option>
+          <option value="javascript:;">위시상품</option>
+          <option value="javascript:;">배송지관리</option>
+          <option value="javascript:;">리뷰</option>
+          <option value="javascript:;">문의내역</option>
+          <option value="javascript:;">회원정보</option>
+        </select>
+      </nav>
+      <aside class="mypage-menu-wrap">
+        <nav>
+          <ol class="mypage-menu">
+            <li class="mypage-menu__link">
+              <a href="javascript:;">홈</a>
+            </li>
+            <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+            <li class="mypage-menu__link--on">
+              <a href="javascript:;">주문조회</a>
+            </li>
+            <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">위시상품</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">배송지관리</a>
+            </li>
+            <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">문의내역</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">회원정보</a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+    <section class="mypage_contents-wrap">
+      <div class="product-info-wrap">
+        <h2>반품 신청하기</h2>
+        <div class="product-info">
+          <dl>
+            <dt>주문일시</dt>
+            <dd>2021.11.12 15:30</dd>
+            <dt>주문번호</dt>
+            <dd>ORD20211111112523</dd>
+            <dt>결제금액</dt>
+            <dd>321.300원</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="order-list-wrap">
+        <ul class="order-list">
+          <li>
+            <div class="image">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+              </div>
+            </div>
+            <div class="text-contents">
+              <div class="item-brand">헤라</div>
+              <div class="item-name">
+                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+              </div>
+              <div class="item-price">
+                <span class="percent">26%</span>
+                <span class="price">29,750원</span>
+                <span class="regular"><del>35,000원</del></span>
+              </div>
+            </div>
+            <ul class="product-price">
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="image">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+              </div>
+            </div>
+            <div class="text-contents">
+              <div class="item-brand">헤라</div>
+              <div class="item-name">
+                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+              </div>
+              <div class="item-price">
+                <span class="percent">26%</span>
+                <span class="price">29,750원</span>
+                <span class="regular"><del>35,000원</del></span>
+              </div>
+            </div>
+            <ul class="product-price">
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="order-total-price-wrap">
+        <dl class="order-total-price">
+          <dd>0원</dd>
+          <dt>배송비</dt>
+          <dd>98,700원</dd>
+          <dt>할인금액</dt>
+          <dd>420,000원</dd>
+          <dt>주문금액</dt>
+        </dl>
+        <dl class="order-total-price-sum">
+          <dt>결제금액</dt>
+          <dd>420,000원</dd>
+        </dl>
+      </div>
+      <div class="return-wrap">
+        <div class="return-reason">
+          <select>
+            <option selected value="0">반품사유 선택</option>
+            <option value="1">배송지 01</option>
+            <option value="2">배송지 02</option>
+            <option value="3">배송지 03</option>
+          </select>
+          <textarea placeholder="기타 반품 사유입력"></textarea>
+        </div>
+        <div class="return-price">
+          <ul class="return-price-list">
+            <li>
+              <span class="return-price-list__tit">반품상품 개수</span>
+              <span class="return-price-list__price">4개</span>
+            </li>
+            <li>
+              <span class="return-price-list__tit">상품금액 합계</span>
+              <span class="return-price-list__price">59,500원</span>
+            </li>
+         
+            <li class="sale">
+              <span class="return-price-list__tit">차감 배송비</span>
+              <span class="return-price-list__price">-9,500원</span>
+            </li>
+            <li>
+              <span class="return-price-list__tit">환불금액</span>
+              <span class="return-price-list__price">2,500원</span>
+            </li>
+          </ul>
+          <div class="buttonWrap">
+            <button class="OrderConfirmBtn primary" type="button">
+              <span>접수하기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+  </section>
+  </div>
+</body>
+
+</html>

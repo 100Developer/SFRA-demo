@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage_order</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- Mypage -->
+    <script defer src="./js/Mypage.js"></script>
+  </head>
+
+  <body>
+    <div class="mypage-wrap">
+      <!--📌 DEV Check(10) : Mypage_order Modal 모달 추가-->
+      <div id="order-modal" class="modal-window">
+        <div class="modal-wrap">
+          <h1>주문취소</h1>
+          <a href="#" title="Close" class="modal-close"><i class="ico_close"></i></a>
+          <div class="modal-wrap__tit-wrap">
+            <h2>주문을 취소하시겠습니까?</h2>
+          </div>
+          <div class="modal-wrap__btn-wrap">
+            <button class="primary">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mypage-header">
+        <h1>마이페이지</h1>
+        <nav>
+          <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+            <option value="javascript:;">홈</option>
+            <option value="javascript:;">주문조회</option>
+            <option value="javascript:;">쿠폰</option>
+            <option value="javascript:;">위시상품</option>
+            <option value="javascript:;">배송지관리</option>
+            <option value="javascript:;">리뷰</option>
+            <option value="javascript:;">문의내역</option>
+            <option value="javascript:;">회원정보</option>
+          </select>
+        </nav>
+        <aside class="mypage-menu-wrap">
+          <nav>
+            <ol class="mypage-menu">
+              <li class="mypage-menu__link">
+                <a href="javascript:;">홈</a>
+              </li>
+              <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+              <li class="mypage-menu__link--on">
+                <a href="javascript:;">주문조회</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">위시상품</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">배송지관리</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">문의내역</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">회원정보</a>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <section class="mypage_contents-wrap">
+        <div id="tab-PDP" class="tab-content">
+          <div id="tabs-container">
+            <ul class="tabs-menu-Mypage">
+              <li class="current"><a href="#tab-Mypage01">주문 / 배송</a></li>
+              <li><a href="#tab-Mypage02">취소 / 반품</a></li>
+            </ul>
+            <div class="tab-wrap">
+              <div id="tab-Mypage01" class="tab-content-Mypage">
+                <h2>주문내역</h2>
+                <div class="filter-wrap">
+                  <select onchange="if(this.value) window.location.href=this.value;" class="filter-button--mobile-menu">
+                    <option value="javascript:;">2주</option>
+                    <option value="javascript:;">1개월</option>
+                    <option value="javascript:;">3개월</option>
+                    <option value="javascript:;">6개월</option>
+                    <option value="javascript:;">1년</option>
+                  </select>
+                  <ol class="filter-button-list">
+                    <li>
+                      <!--📌 DEV Check(8) : 선택시, class="filter-button--on" 추가-->
+                      <button class="default-R filter-button--on" type="button">2주</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">1개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">3개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">6개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">1년</button>
+                    </li>
+                  </ol>
+                  <input class="filter-date" type="date" />
+                  <input class="filter-date" type="date" />
+                  <button type="button" class="secondary">조회</button>
+                </div>
+                <div class="Product-list-wrap">
+                  <ul class="Product-list">
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">결제완료</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <!--📌 DEV Check(10) : Mypage_order Modal 모달 버튼-->
+                        <button type="button" class="secondary" onClick="location.href='#order-modal'">주문취소</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">배송완료</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <button type="button" class="default">리뷰작성</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">배송중</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <button type="button" class="default">배송추적</button>
+                        <button type="button" class="secondary">반품신청</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <ol class="pagination">
+                  <li></li>
+                  <li><span>01</span></li>
+                  <li><span>02</span></li>
+                  <li><span>03</span></li>
+                  <li><span>04</span></li>
+                  <li><span>05</span></li>
+                  <li></li>
+                </ol>
+              </div>
+              <!--tab-Mypage01-->
+              <div id="tab-Mypage02" class="tab-content-Mypage">
+                <h2>취소내역</h2>
+                <div class="filter-wrap">
+                  <select onchange="if(this.value) window.location.href=this.value;" class="filter-button--mobile-menu">
+                    <option value="javascript:;">2주</option>
+                    <option value="javascript:;">1개월</option>
+                    <option value="javascript:;">3개월</option>
+                    <option value="javascript:;">6개월</option>
+                    <option value="javascript:;">1년</option>
+                  </select>
+                  <ol class="filter-button-list">
+                    <li>
+                      <!--📌 DEV Check(8) : 선택시, class="filter-button--on" 추가-->
+                      <button class="default-R filter-button--on" type="button">2주</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">1개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">3개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">6개월</button>
+                    </li>
+                    <li>
+                      <button class="default-R" type="button">1년</button>
+                    </li>
+                  </ol>
+                  <input class="filter-date" type="date" />
+                  <input class="filter-date" type="date" />
+                  <button type="button" class="secondary">조회</button>
+                </div>
+                <div class="Product-list-wrap">
+                  <ul class="Product-list">
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">결제완료</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <!--📌 DEV Check(10) : Mypage_order Modal 모달 버튼-->
+                        <button type="button" class="secondary" onClick="location.href='#order-modal'">주문취소</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">배송완료</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <button type="button" class="default">리뷰작성</button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="Product-list__image">
+                        <div class="Product-list__image__item-image">
+                          <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                        </div>
+                      </div>
+                      <div class="Product-list__text-contents">
+                        <div class="Product-list__text-contents__item-brand">헤라</div>
+                        <div class="Product-list__text-contents__item-name">로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 6건</div>
+                        <div class="Product-list__item-info">
+                          <span class="Product-list__item-info__price">29,750원</span>
+                          <span class="Product-list__item-info__condition">배송중</span>
+                          <span class="Product-list__item-info__date">2022.02.11</span>
+                          <span class="Product-list__item-info__order-num">ORD2021111112553</span>
+                        </div>
+                      </div>
+                      <div class="Product-list__button">
+                        <button type="button" class="default">배송추적</button>
+                        <button type="button" class="secondary">반품신청</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <ol class="pagination">
+                  <li></li>
+                  <li><span>01</span></li>
+                  <li><span>02</span></li>
+                  <li><span>03</span></li>
+                  <li><span>04</span></li>
+                  <li><span>05</span></li>
+                  <li></li>
+                </ol>
+              </div>
+              <!--tab-Mypage02-->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

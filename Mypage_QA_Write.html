@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage_QA_Write</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="mypage-wrap">
+      <div class="mypage-header">
+        <h1>마이페이지</h1>
+        <nav>
+          <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+            <option value="javascript:;">홈</option>
+            <option value="javascript:;">주문조회</option>
+            <option value="javascript:;">쿠폰</option>
+            <option value="javascript:;">위시상품</option>
+            <option value="javascript:;">배송지관리</option>
+            <option value="javascript:;">리뷰</option>
+            <option value="javascript:;">문의내역</option>
+            <option value="javascript:;">회원정보</option>
+          </select>
+        </nav>
+        <aside class="mypage-menu-wrap">
+          <nav>
+            <ol class="mypage-menu">
+              <li class="mypage-menu__link">
+                <a href="javascript:;">홈</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">주문조회</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">위시상품</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">배송지관리</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+              <li class="mypage-menu__link--on">
+                <a href="javascript:;">문의내역</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">회원정보</a>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <section class="mypage_contents-wrap">
+        <div class="inquiry-write-wrap">
+          <h2>문의하기</h2>
+          <div class="inquiry-write">
+            <div class="inquiry-write__input--half">
+              <select>
+                <option>문의유형선택</option>
+              </select>
+            </div>
+            <div class="inquiry-write__input--half">
+              <select>
+                <option>주문번호선택</option>
+              </select>
+            </div>
+            <div class="inquiry-write__input--half">
+              <label>문의제목</label>
+              <input type="number" placeholder="010-2222-2222" />
+            </div>
+            <div class="inquiry-write__input">
+              <textarea placeholder="문의내용을 입력해주세요."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrap-center">
+          <button class="primary">등록</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

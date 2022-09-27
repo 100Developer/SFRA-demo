@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage_wish</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap” rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- Mypage -->
+    <script defer src="./js/Mypage.js"></script>
+  </head>
+
+  <body>
+    <div class="mypage-wrap">
+      <!--📌 DEV Check(11) : Mypage_wish01 Modal 모달 추가-->
+      <div id="wish01-modal" class="modal-window wish01-modal">
+        <div class="modal-wrap">
+          <h1>장바구니 등록</h1>
+          <a href="#" title="Close" class="modal-close"><i class="ico_close"></i></a>
+          <div class="modal-wrap__tit-wrap">
+            <h2>장바구니 등록이 완료되었습니다.</h2>
+          </div>
+          <div class="modal-wrap__btn-wrap">
+            <button class="default">닫기</button>
+            <button class="primary">장바구니 이동</button>
+          </div>
+        </div>
+      </div>
+
+      <!--📌 DEV Check(11) : Mypage_wish02 Modal 모달 추가-->
+      <div id="wish02-modal" class="modal-window wish02-modal">
+        <div class="modal-wrap">
+          <h1>주문취소</h1>
+          <a href="#" title="Close" class="modal-close"><i class="ico_close"></i></a>
+          <div class="modal-wrap__tit-wrap">
+            <span>옵션 선택 후, 장바구니에 추가할 수 있습니다.</span>
+            <select class="modal-wrap__tit-wrap__select--option">
+              <option>옵션 선택</option>
+            </select>
+            <select class="modal-wrap__tit-wrap__select--number">
+              <option>수량</option>
+            </select>
+          </div>
+          <div class="modal-wrap__btn-wrap">
+            <button class="primary">장바구니 추가</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mypage-header">
+        <h1>마이페이지</h1>
+        <nav>
+          <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+            <option value="javascript:;">홈</option>
+            <option value="javascript:;">주문조회</option>
+            <option value="javascript:;">쿠폰</option>
+            <option value="javascript:;">위시상품</option>
+            <option value="javascript:;">배송지관리</option>
+            <option value="javascript:;">리뷰</option>
+            <option value="javascript:;">문의내역</option>
+            <option value="javascript:;">회원정보</option>
+          </select>
+        </nav>
+        <aside class="mypage-menu-wrap">
+          <nav>
+            <ol class="mypage-menu">
+              <li class="mypage-menu__link">
+                <a href="javascript:;">홈</a>
+              </li>
+
+              <li class="mypage-menu__link">
+                <a href="javascript:;">주문조회</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">쿠폰</a>
+              </li>
+              <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+              <li class="mypage-menu__link--on">
+                <a href="javascript:;">위시상품</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">배송지관리</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">문의내역</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">회원정보</a>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <section class="mypage_contents-wrap">
+        <div class="product-list-wrap">
+          <h2>위시상품 ㅣ 총 <b>20</b>개</h2>
+          <div class="button-wrap">
+            <button class="default">선택삭제</button>
+            <button class="secondary">전체삭제</button>
+          </div>
+          <div class="product-list">
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <!--📌 DEV Check(11) : Mypage_wish01 Modal 모달 버튼-->
+              <button onClick="location.href='#wish01-modal'" class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <!--📌 DEV Check(11) : Mypage_wish02 Modal 모달 버튼-->
+              <button onClick="location.href='#wish02-modal'" class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+            <div class="items">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product17.jpg" /></a>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+                  <svg class="checkbox__check">
+                    <polyline points="15 3 6 11 2 6"></polyline>
+                  </svg>
+                </label>
+              </div>
+              <div class="item-brand">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-name">CHRISTIAN LOUBOUTIN</div>
+              <div class="item-price">
+                <span class="percent">24%</span>
+                <span class="price">120,000</span>
+                <span class="regular"><del>120,000</del></span>
+              </div>
+              <div class="item-review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i><span>&nbsp&nbsp|&nbsp리뷰 46</span>
+              </div>
+              <button class="review-write-button defaultLine">장바구니 추가</button>
+            </div>
+          </div>
+          <ol class="pagination">
+            <li></li>
+            <li><span>01</span></li>
+            <li><span>02</span></li>
+            <li><span>03</span></li>
+            <li><span>04</span></li>
+            <li><span>05</span></li>
+            <li></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

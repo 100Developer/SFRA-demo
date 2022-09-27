@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrderConfirm</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com”
+        crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+        rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico”
+        type=“image/x-icon”> <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/OrderConfirm.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+</head>
+
+<body>
+    <section class="pageWrap OrderConfirm">
+        <h1>주문완료</h1>
+
+        <div class="ordernumber-wrap">
+            <h2>주문번호 : $자동 생성된 주문번호$</h2>
+            <div class="ordernumber-wrap__cont">
+                <b>주문이 완료되었습니다.</b>
+            </div>
+        </div>
+        <ol class="breadcrumbs">
+            <li><a href="javascript:;">장바구니</a></li>
+            <li><a href="javascript:;">주문/결제</a></li>
+            <li class="on"><a href="javascript:;">주문완료</a></li>
+        </ol>
+        <article class="OrderConfirm-wrap">
+            <h2>주문고객</h2>
+            <div class="ordercustomer-wrap__cus-info">
+                <dl>
+                    <dt>성함</dt>
+                    <dd>김유신</dd>
+                    <dt>연락처</dt>
+                    <dd>010-3333-3333</dd>
+                    <dt>이메일</dt>
+                    <dd>i2max@i2max.co.kr</dd>
+                </dl>
+            </div>
+
+            <h2>받는분 정보</h2>
+            <div class="recipient-wrap">
+                <div class="recipient-wrap__input--half">
+                    <label>받으시는분</label>
+                    <input class="done" readonly type="text" placeholder="김유신">
+                </div>
+                <div class="recipient-wrap__input--half">
+                    <label>전화번호</label>
+                    <input class="done" readonly type="number" placeholder="010-2222-2222">
+                </div>
+                <div class="recipient-wrap__input--half">
+                    <label>우편번호</label>
+                    <input class="done" readonly type="number" placeholder="68493">
+                </div>
+                <div class="recipient-wrap__input--half">
+                </div>
+                <div class="recipient-wrap__input">
+                    <input class="done" readonly type="number" placeholder="서울시 마포구 마포대로 137 KPX빌딩">
+                </div>
+                <div class="recipient-wrap__input">
+                    <input class="done" readonly type="number" placeholder="7층">
+                </div>
+            </div>
+            <h2>결제정보</h2>
+            <div class="ordermethod-wrap__cont">
+                <dl>
+                    <dt>결제 수단</dt>
+                    <dd>KCP 신용카드</dd>
+                </dl>
+            </div>
+            <h2>주문상품 ㅣ 총 <b>22</b>개</h2>
+            <div class="ordersummary-wrap__cont">
+                <dl>
+                    <dt>주문 요약</dt>
+                    <dd>헤라 로즈 인퓨전 컬렉션 센슈얼 파우더 매트 외 21개</dd>
+                </dl>
+            </div>
+            <div class="order-list">
+                <input type="checkbox" class="read-more-state" id="post-2" />
+                <ul class="PA-list read-more-wrap">
+                    <li>
+                        <div class="image">
+                            <div class="item-image">
+                                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="text-contents">
+                            <div class="item-brand">헤라</div>
+                            <div class="item-name">
+                                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+                            </div>
+                            <div class="item-price">
+                                <span class="percent">26%</span>
+                                <span class="price">29,750원</span>
+                                <span class="regular"><del>35,000원</del></span>
+                            </div>
+                        </div>
+                        <ul class="PA-price">
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--📌 DEV Check(5) : li class="read-more-target" 추가시 숨김처리 -->
+                    <li class="read-more-target">
+                        <div class="image">
+                            <div class="item-image">
+                                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+                            </div>
+                        </div>
+                        <div class="text-contents">
+                            <div class="item-brand">헤라</div>
+                            <div class="item-name">
+                                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+                            </div>
+                            <div class="item-price">
+                                <span class="percent">26%</span>
+                                <span class="price">29,750원</span>
+                                <span class="regular"><del>35,000원</del></span>
+                            </div>
+                        </div>
+                        <ul class="PA-price">
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                            <li>
+                                <div class="select-option clearFix">
+                                    <div class="optionName">121호 에피소드</div>
+                                    <div class="optionButton">
+                                        <input type="text" value="01" readonly />
+                                    </div>
+                                    <span class="price">29,750원</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <label for="post-2" class="read-more-trigger"><span>&nbsp;+</span></label>
+            </div>
+
+        </article>
+
+        <aside class="checkArea">
+            <div class="orderPrice clearFix">
+                <h2>결제 금액</h2>
+                <ul class="orderPrice-list">
+                    <li>
+                        <span class="OL-tit">상품 금액</span>
+                        <span class="OL-price">59,500원</span>
+                    </li>
+                    <li class="sale">
+                        <span class="OL-tit">상품 할인</span>
+                        <span class="OL-price">-9,500원</span>
+                    </li>
+                    <li class="sale">
+                        <span class="OL-tit">쿠폰 할인</span>
+                        <span class="OL-price">-9,500원</span>
+                    </li>
+                    <li class="sale">
+                        <span class="OL-tit">적립금 할인</span>
+                        <span class="OL-price">-9,500원</span>
+                    </li>
+                    <li>
+                        <span class="OL-tit">배송비</span>
+                        <span class="OL-price">2,500원</span>
+                    </li>
+                </ul>
+
+
+                <div class="totalPrice">
+                    <h5>결제 금액</h5>
+                    <span class="optionNum">총 22개</span>
+                    <span class="price">61,050원</span>
+                </div>
+                <div class="buttonWrap">
+                    <button class="OrderConfirmBtn secondary" type="button">
+                        <span>주문 상세 보기</span>
+                    </button>
+                    <button class="OrderConfirmBtn primary" type="button">
+                        <span>쇼핑 계속하기</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+</body>
+
+</html>

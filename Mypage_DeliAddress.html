@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mypage_DeliAddress</title>
+  <!-- CDN fontstyle -->
+  <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com”
+    crossorigin>
+  <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+  <!-- favicon -->
+  <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico”
+    type=“image/x-icon”> <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  <!-- jQuery -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+  <!-- Mypage -->
+  <script defer src="./js/Mypage.js"></script>
+</head>
+
+<body>
+  <div class="mypage-wrap">
+    <!--📌 DEV Check(13) : Mypage_DeliAddress Modal 모달 추가-->
+    <div id="DeliAddress-modal" class="modal-window DeliAddress-modal">
+      <div class="modal-wrap">
+        <h1>배송지 등록/수정하기</h1>
+        <a href="#" title="Close" class="modal-close"><i class="ico_close"></i></a>
+        <div class="DeliAddress-modal-wrap">
+          <div class="DeliAddress-modal-wrap__input--half">
+            <label>배송지명</label>
+            <input type="text" placeholder="성함">
+          </div>
+          <div class="DeliAddress-modal-wrap__input--half">
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+              <svg class="checkbox__check">
+                <polyline points="15 3 6 11 2 6"></polyline>
+              </svg>
+              기본 배송지 설정
+            </label>
+          </div>
+          <div class="DeliAddress-modal-wrap__input--half">
+            <label>받으시는분</label>
+            <input type="text" placeholder="성함">
+          </div>
+          <div class="DeliAddress-modal-wrap__input--half">
+            <label>전화번호</label>
+            <input type="number" placeholder="숫자만 입력">
+          </div>
+          <div class="DeliAddress-modal-wrap__input--half">
+            <label>우편번호</label>
+            <input type="number" readonly placeholder="우편번호">
+          </div>
+          <div class="DeliAddress-modal-wrap__input--half">
+            <button class="primary" type="button">주소검색</button>
+          </div>
+          <div class="DeliAddress-modal-wrap__input">
+            <input type="number" readonly placeholder="주소1">
+          </div>
+          <div class="DeliAddress-modal-wrap__input">
+            <input type="number" placeholder="상세주소">
+          </div>
+          
+        </div>
+        <div class="modal-wrap__btn-wrap">
+          <button class="primary">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mypage-header">
+      <h1>마이페이지</h1>
+      <nav>
+        <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+          <option value="javascript:;">홈</option>
+          <option value="javascript:;">주문조회</option>
+          <option value="javascript:;">쿠폰</option>
+          <option value="javascript:;">위시상품</option>
+          <option value="javascript:;">배송지관리</option>
+          <option value="javascript:;">리뷰</option>
+          <option value="javascript:;">문의내역</option>
+          <option value="javascript:;">회원정보</option>
+        </select>
+      </nav>
+      <aside class="mypage-menu-wrap">
+        <nav>
+          <ol class="mypage-menu">
+            <li class="mypage-menu__link">
+              <a href="javascript:;">홈</a>
+            </li>
+
+            <li class="mypage-menu__link">
+              <a href="javascript:;">주문조회</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">쿠폰</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">위시상품</a>
+            </li>
+            <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+            <li class="mypage-menu__link--on">
+              <a href="javascript:;">배송지관리</a>
+            </li>
+            <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">문의내역</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">회원정보</a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+    <section class="mypage_contents-wrap">
+      <div class="delivery-address-wrap">
+        <h2>등록된 배송지 ㅣ 총 <b>2</b>개</h2>
+        <div class="button-wrap">
+          <!--📌 DEV Check(13) : Mypage_DeliAddress Modal 모달 버튼-->
+          <button onClick="location.href='#DeliAddress-modal'" class="primary">배송지 추가</button>
+          <button class="default">선택삭제</button>
+          <button class="secondary">전체삭제</button>
+        </div>
+        <div class="delivery-address-title">
+          <h2>집</h2>
+          <div class="edit-button">
+            <label>기본 배송지</label>
+            <button class="secondary">수정</button>
+          </div>
+        </div>
+        
+
+        <div class="delivery-info">
+          <label class="checkbox">
+            선택
+            <input class="checkbox__input" type="checkbox" value="" onclick="onClickHandler(this)" />
+            <svg class="checkbox__check">
+              <polyline points="15 3 6 11 2 6"></polyline>
+            </svg>
+          </label>
+          <div class="delivery-info__input--half">
+            <label>받으시는분</label>
+            <input class="done" readonly type="text" placeholder="김유신">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>전화번호</label>
+            <input class="done" readonly type="number" placeholder="010-2222-2222">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>우편번호</label>
+            <input class="done" readonly type="number" placeholder="68493">
+          </div>
+          <div class="delivery-info__input--half">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="서울시 마포구 마포대로 137 KPX빌딩">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="7층">
+          </div>
+        </div>
+        <div class="delivery-address-title">
+          <h2>회사</h2>
+          <div class="edit-button">
+            <button class="secondary">수정</button>
+            
+          </div>
+        </div>
+        <!--📌 DEV Check(9) : 선택시, class="delivery-info--check" 추가-->
+        <div class="delivery-info delivery-info--check">
+          <label class="checkbox">
+            선택
+            <input class="checkbox__input" type="checkbox" checked value="" onclick="onClickHandler(this)" />
+            <svg class="checkbox__check">
+              <polyline points="15 3 6 11 2 6"></polyline>
+            </svg>
+          </label>
+          <div class="delivery-info__input--half">
+            <label>받으시는분</label>
+            <input class="done" readonly type="text" placeholder="김유신">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>전화번호</label>
+            <input class="done" readonly type="number" placeholder="010-2222-2222">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>우편번호</label>
+            <input class="done" readonly type="number" placeholder="68493">
+          </div>
+          <div class="delivery-info__input--half">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="서울시 마포구 마포대로 137 KPX빌딩">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="7층">
+          </div>
+        </div>
+      </div>
+
+      <ol class="pagination">
+        <li></li>
+        <li><span>01</span></li>
+        <li><span>02</span></li>
+        <li><span>03</span></li>
+        <li><span>04</span></li>
+        <li><span>05</span></li>
+        <li></li>
+      </ol>
+  </div>
+  </section>
+  </div>
+</body>
+
+</html>

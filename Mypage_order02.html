@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mypage_order02</title>
+  <!-- CDN fontstyle -->
+  <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link rel=“preconnect” href=“https://fonts.gstatic.com”
+    crossorigin>
+  <link href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+  <!-- favicon -->
+  <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link rel=“icon” href=“/img/favicon.ico”
+    type=“image/x-icon”> <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+  <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+  <!-- jQuery -->
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+  <!-- Mypage -->
+  <script defer src="./js/Mypage.js"></script>
+</head>
+
+<body>
+  <div class="mypage-wrap">
+    <div class="mypage-header">
+      <h1>마이페이지</h1>
+      <nav>
+        <select onchange="if(this.value) window.location.href=this.value;" class="mypage-header--mobile-menu">
+          <option value="javascript:;">홈</option>
+          <option value="javascript:;">주문조회</option>
+          <option value="javascript:;">쿠폰</option>
+          <option value="javascript:;">위시상품</option>
+          <option value="javascript:;">배송지관리</option>
+          <option value="javascript:;">리뷰</option>
+          <option value="javascript:;">문의내역</option>
+          <option value="javascript:;">회원정보</option>
+        </select>
+      </nav>
+      <aside class="mypage-menu-wrap">
+        <nav>
+          <ol class="mypage-menu">
+            <li class="mypage-menu__link">
+              <a href="javascript:;">홈</a>
+            </li>
+            <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+            <li class="mypage-menu__link--on">
+              <a href="javascript:;">주문조회</a>
+            </li>
+            <li class="mypage-menu__link"><a href="javascript:;">쿠폰</a></li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">위시상품</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">배송지관리</a>
+            </li>
+            <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">문의내역</a>
+            </li>
+            <li class="mypage-menu__link">
+              <a href="javascript:;">회원정보</a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+    <section class="mypage_contents-wrap">
+      <div class="product-info-wrap">
+        <h2>주문 상세 내역</h2>
+        <div class="product-info">
+          <dl>
+            <dt>주문일시</dt>
+            <dd>2021.11.12 15:30</dd>
+            <dt>주문번호</dt>
+            <dd>ORD20211111112523</dd>
+            <dt>결제금액</dt>
+            <dd>321.300원</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="order-list-wrap">
+        <ul class="order-list">
+          <li>
+            <div class="image">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+              </div>
+            </div>
+            <div class="text-contents">
+              <div class="item-brand">헤라</div>
+              <div class="item-name">
+                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+              </div>
+              <div class="item-price">
+                <span class="percent">26%</span>
+                <span class="price">29,750원</span>
+                <span class="regular"><del>35,000원</del></span>
+              </div>
+            </div>
+            <div class="order-label">
+              <label>결제완료</label>
+              <button class="secondary">주문취소</button>
+            </div>
+
+            <ul class="product-price">
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="image">
+              <div class="item-image">
+                <a href="javascript:;"><img src="./img/img_product8.jpg" /></a>
+              </div>
+            </div>
+            <div class="text-contents">
+              <div class="item-brand">헤라</div>
+              <div class="item-name">
+                로즈 인퓨전 컬렉션 센슈얼 파우더 매트
+              </div>
+              <div class="item-price">
+                <span class="percent">26%</span>
+                <span class="price">29,750원</span>
+                <span class="regular"><del>35,000원</del></span>
+              </div>
+            </div>
+            <div class="order-label">
+              <label>결제완료</label>
+              <button class="secondary">주문취소</button>
+            </div>
+            <ul class="product-price">
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+              <li>
+                <div class="select-option clearFix">
+                  <div class="optionName">121호 에피소드</div>
+                  <div class="optionButton">
+                    <input type="text" value="01" readonly />
+                  </div>
+                  <span class="price">29,750원</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="order-total-price-wrap">
+        <dl class="order-total-price">
+          <dd>0원</dd>
+          <dt>배송비</dt>
+          <dd>98,700원</dd>
+          <dt>할인금액</dt>
+          <dd>420,000원</dd>
+          <dt>주문금액</dt>
+        </dl>
+        <dl class="order-total-price-sum">
+          <dt>결제금액</dt>
+          <dd>420,000원</dd>
+        </dl>
+      </div>
+      <div class="delivery-info-wrap">
+        <h2>배송 정보</h2>
+        <div class="delivery-info">
+          <div class="delivery-info__input--half">
+            <label>받으시는분</label>
+            <input class="done" readonly type="text" placeholder="김유신">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>전화번호</label>
+            <input class="done" readonly type="number" placeholder="010-2222-2222">
+          </div>
+          <div class="delivery-info__input--half">
+            <label>우편번호</label>
+            <input class="done" readonly type="number" placeholder="68493">
+          </div>
+          <div class="delivery-info__input--half">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="서울시 마포구 마포대로 137 KPX빌딩">
+          </div>
+          <div class="delivery-info__input">
+            <input class="done" readonly type="number" placeholder="7층">
+          </div>
+        </div>
+      </div>
+      <div class="waybill-info-wrap">
+        <h2>운송장 정보</h2> <button class="secondary">배송조회</button>
+        <div class="waybill-info">
+          <div class="waybill-info__input--half">
+            <label>발송일</label>
+            <input class="done" readonly type="text" placeholder="김유신">
+          </div>
+          <div class="waybill-info__input--half">
+            <label>CJ 대한통운</label>
+            <input class="done" readonly type="number" placeholder="010-2222-2222">
+          </div>
+
+        </div>
+      </div>
+      <div class="pay-info-wrap">
+        <h2>결제 정보</h2>
+        <div class="pay-wrap">
+          <div class="pay-info">
+            <ul class="pay-info-list">
+              
+              <li>
+                <span class="pay-info-list__tit">상품 금액</span>
+                <span class="pay-info-list__price">59,500원</span>
+              </li>
+              <li class="sale">
+                <span class="pay-info-list__tit">상품 할인</span>
+                <span class="pay-info-list__price">-9,500원</span>
+              </li>
+  
+              <li class="sale">
+                <span class="pay-info-list__tit">쿠폰 할인</span>
+                <span class="pay-info-list__price">-9,500원</span>
+              </li>
+              <li class="sale">
+                <span class="pay-info-list__tit">적립금 할인</span>
+                <span class="pay-info-list__price">-9,500원</span>
+              </li>
+              <li>
+                <span class="pay-info-list__tit">환불금액</span>
+                <span class="pay-info-list__price">2,500원</span>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="pay-total-info">
+            <b>결제수단</b><br>
+            <span>신용카드 / 일시불</span><br>
+            <b>최종 결제 금액</b><br>
+            <dl class="pay-total-info-sum">
+              <dt>총 22개</dt>
+              <dd>420,000원</dd>
+            </dl>
+            <div class="buttonWrap">
+              <button class="secondary" type="button">
+                <span>주문 목록</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+  </div>
+  </section>
+  </div>
+</body>
+
+</html>

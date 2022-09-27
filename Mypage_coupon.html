@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mypage_coupon</title>
+    <!-- CDN fontstyle -->
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link
+    rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap”
+    rel=“stylesheet”>
+
+    <!-- favicon -->
+    <link rel=“shortcut icon” href=“/img/favicon.ico” type=“image/x-icon”> <link
+    rel=“icon” href=“/img/favicon.ico” type=“image/x-icon”>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Mypage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- Mypage -->
+    <script defer src="./js/Mypage.js"></script>
+  </head>
+
+  <body>
+    <div class="mypage-wrap">
+      <div class="mypage-header">
+        <h1>마이페이지</h1>
+        <nav>
+          <select
+            onchange="if(this.value) window.location.href=this.value;"
+            class="mypage-header--mobile-menu"
+          >
+            <option value="javascript:;">홈</option>
+            <option value="javascript:;">주문조회</option>
+            <option value="javascript:;">쿠폰</option>
+            <option value="javascript:;">위시상품</option>
+            <option value="javascript:;">배송지관리</option>
+            <option value="javascript:;">리뷰</option>
+            <option value="javascript:;">문의내역</option>
+            <option value="javascript:;">회원정보</option>
+          </select>
+        </nav>
+        <aside class="mypage-menu-wrap">
+          <nav>
+            <ol class="mypage-menu">
+              <li class="mypage-menu__link">
+                <a href="javascript:;">홈</a>
+              </li>
+
+              <li class="mypage-menu__link">
+                <a href="javascript:;">주문조회</a>
+              </li>
+              <!--📌 DEV Check(7) : 페이지당, class="mypage-menu__link--on" 추가-->
+              <li class="mypage-menu__link--on">
+                <a href="javascript:;">쿠폰</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">위시상품</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">배송지관리</a>
+              </li>
+              <li class="mypage-menu__link"><a href="javascript:;">리뷰</a></li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">문의내역</a>
+              </li>
+              <li class="mypage-menu__link">
+                <a href="javascript:;">회원정보</a>
+              </li>
+            </ol>
+          </nav>
+        </aside>
+      </div>
+      <section class="mypage_contents-wrap">
+        <div class="possession-coupon-wrap">
+          <h2>보유쿠폰 ㅣ 총 <b>2</b>개</h2>
+          <div class="possession-coupon-search-wrap">
+            <input
+              class="possession-coupon-search"
+              type="text"
+              value=""
+              placeholder="등록할 쿠폰 번호 입력"
+            />
+            <button class="secondary">조회</button>
+          </div>
+          <div class="possession-coupon">
+            <ul>
+              <li>
+                <span class="possession-coupon__tit"
+                  >2월 신규회원 웰컴 쿠폰</span
+                >
+                <span class="possession-coupon__price">10,000원</span>
+                <span class="possession-coupon__date">2021.12.31까지</span>
+              </li>
+              <li>
+                <span class="possession-coupon__tit"
+                  >2월 신규회원 웰컴 쿠폰</span
+                >
+                <span class="possession-coupon__price">10,000원</span>
+                <span class="possession-coupon__date">2021.12.31까지</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="download-coupon-wrap">
+          <h2>다운 가능쿠폰 ㅣ 총 <b>2</b>개</h2>
+          <div class="download-coupon">
+            <ul>
+              <li>
+                <span class="download-coupon__tit">2월 신규회원 웰컴 쿠폰</span>
+                <span class="download-coupon__price">10,000원</span>
+                <span class="download-coupon__date">2021.12.31까지</span>
+                <a href="javascript:;">다운로드</a>
+              </li>
+              <li>
+                <span class="download-coupon__tit">2월 신규회원 웰컴 쿠폰</span>
+                <span class="download-coupon__price">10,000원</span>
+                <span class="download-coupon__date">2021.12.31까지</span>
+                <a href="javascript:;">다운로드</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
